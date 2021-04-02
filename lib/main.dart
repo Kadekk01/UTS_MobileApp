@@ -28,36 +28,36 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     var questions = [
-      'Berapa ada warna dalam pelangi?',
-      'Apa kartun kesukaan anda?',
-    ];
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Aplikasi quiz'),
-        ),
-        body: Column(
-          children: [
-            Question(
-              questions[_questionIndex],
-            ),
-            ElevatedButton(
-              child: Text('jawab 1'),
-              onPressed: _answerQuestion,
-            ),
-            ElevatedButton(
-              child: Text('jawab 2'),
-              onPressed: () => print('jawab 2 dipilih!'),
-            ),
-            ElevatedButton(
-              child: Text('jawab 3'),
-              onPressed: () {
-                print('jawab 3 dipilih');
-              },
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+     {
+       'questionText': 'Apa warna favorit anda?',
+       'answers': ['Hitam', 'Merah', 'Hijau', 'Putih'],
+     },
+     {
+       'questionText': 'Apa peliharaan favorit anda?',
+       'answers': ['Anjing', 'kucing', 'Burung', 'Ular'],
+     },
+     {
+       'questionText': 'Berapa jumlah peliharaan anda?',
+       'answers': ['1 ekor', '2 ekor', '3 ekor', '4 ekor'],
+     },
+   ];
+   return MaterialApp(
+     home: Scaffold(
+       appBar: AppBar(
+         title: Text('Aplikasi quiz'),
+       ),
+       body: Column(
+         children: [
+           Question(
+             questions[_questionIndex]['questionText'],
+           ),
+           ...(questions[_questionIndex]['answers'] as List<String>)
+               .map((answer) {
+             return Answer(_answerQuestion, answer);
+           }).toList()
+         ],
+       ),
+     ),
+   );
+ }
 }
