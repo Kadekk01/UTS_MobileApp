@@ -28,8 +28,8 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     var questions = [
-      'Apa warna favorit anda?',
-      'apa peliharaan favorit anda?',
+      'Berapa ada warna dalam pelangi?',
+      'Apa kartun kesukaan anda?',
     ];
     return MaterialApp(
       home: Scaffold(
