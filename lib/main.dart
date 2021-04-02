@@ -29,16 +29,16 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     var questions = [
      {
-       'questionText': 'Apa warna favorit anda?',
-       'answers': ['Hitam', 'Merah', 'Hijau', 'Putih'],
+       'questionText': 'Ada berapa warna dalam pelangi?',
+       'answers': ['7 Warna', '6 Warna', '2 Warna', '8 Warna', '10 Warna'],
      },
      {
-       'questionText': 'Apa peliharaan favorit anda?',
-       'answers': ['Anjing', 'kucing', 'Burung', 'Ular'],
+       'questionText': 'Mau pilih siapa, aku atau dia?',
+       'answers': ['Kamu donk', 'Dia aja'],
      },
      {
-       'questionText': 'Berapa jumlah peliharaan anda?',
-       'answers': ['1 ekor', '2 ekor', '3 ekor', '4 ekor'],
+       'questionText': 'Tujuan anda hidup apa?',
+       'answers': ['Rebahan', 'Wanita', 'Pahala', 'Uang'],
      },
    ];
    return MaterialApp(
